@@ -68,6 +68,54 @@ In order to get the data pulled from kaggle and setup the dataset source directo
 
 ```
 
+### Evaluation Metrics for Image Captioning 
+
+The current codebase uses NLTK to calculate BLEU scores. However, BLEU-1 to BLEU-n can be easily implemented. We are using the NLTK library for doing this which provides a nice interface to achieve this.
+
+Here is the explanation of how BLEU score computation is defined:
+
+**BLEU-n** is just the geometric average of the n-gram precision.
+
+```
+(precisely it's string matching, at different n-gram levels, between references and hypotheses; 
+
+that's why there has been much criticism on this metric. 
+
+But, people still use it anyways because it has stuck with the community for ages)
+```
+
+For example, **BLEU-1** is simply the **unigram precision**, **BLEU-2** is the **geometric average of unigram and bigram precision**, **BLEU-3** is the **geometric average of unigram, bigram, and trigram precision** and so on.
+
+Having said that, if you want to compute specific **n-gram BLEU scores**, you have to pass a weights parameter when you call **corpus_bleu** . Note that if you ignore passing this weights parameter, then by default BLEU-4 scores are returned, which is what happening in the evaluation here.
+
+To compute, BLEU-1 you can call copus_bleu with weights as
+```
+weights = (1.0/1.0, )
+corpus_bleu(references, hypotheses, weights)
+```
+
+To compute, BLEU-2 you can call corpus_bleu with weights as
+
+```
+weights=(1.0/2.0, 1.0/2.0,)
+corpus_bleu(references, hypotheses, weights)
+```
+
+To compute, BLEU-3 you can call corpus_bleu with weights as
+
+```
+weights=(1.0/3.0, 1.0/3.0, 1.0/3.0,)
+corpus_bleu(references, hypotheses, weights)
+```
+
+To compute, BLEU-5 you can call corpus_bleu with weights as
+
+```
+weights=(1.0/5.0, 1.0/5.0, 1.0/5.0, 1.0/5.0, 1.0/5.0,)
+corpus_bleu(references, hypotheses, weights)
+```
+
+
 ### References
 
 
