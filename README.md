@@ -13,6 +13,10 @@
 | Kshitij Zutshi | 001021288 | 
 | Parth Shah | 001006181 | 
 
+### Project Summary Document
+
+[Project Summary Document](https://github.com/shahparth0007/AdvanceDataScience/blob/main/INFO7390-ADS-FinalProject-document.pdf) :notebook_with_decorative_cover:
+
 ### Abstract
 
 
