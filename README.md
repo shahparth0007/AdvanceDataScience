@@ -77,8 +77,7 @@ https://iopscience.iop.org/article/10.1088/1742-6596/1712/1/012015/pdf
 
 https://arxiv.org/pdf/1412.3555.pdf
 
-https://www.freecodecamp.org/news/building-an-image-caption-generator-with-deep-learning-in-t
-ensorflow-a142722e9b1f
+https://www.freecodecamp.org/news/building-an-image-caption-generator-with-deep-learning-in-tensorflow-a142722e9b1f
 
 https://vision.cornell.edu/se3/wp-content/uploads/2018/03/1501.pdf
  
